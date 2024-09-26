@@ -6,15 +6,19 @@ import notFound from "./middleware/notFound"
 import errorHandler from "./middleware/errorHandler"
 import routes from "./routes"
 
+import syncModels from "./models"
+
 const app = express()
 
 require("dotenv").config()
 const PORT = process.env.PORT || 5100
 
-app.use(morgan('dev'));
-app.use(helmet());
-app.use(cors());
-app.use(express.json());
+app.use(morgan('dev'))
+app.use(helmet())
+app.use(cors())
+app.use(express.json())
+
+syncModels()
 
 
 app.get("/", (req,res) => { 

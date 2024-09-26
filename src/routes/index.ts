@@ -1,8 +1,8 @@
 import express from "express"
-import toDoRoutes from "./toDoRoutes"
+import clientsRoutes from "./clientsRoutes"
 
 const router = express.Router()
 
-router.use("/todo", toDoRoutes)
+router.use("/clients", clientsRoutes)
 
 export default router
