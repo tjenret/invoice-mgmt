@@ -38,6 +38,7 @@ const Client = DB.define(
     email: {
       type: DataTypes.STRING,
       allowNull: false,
+      unique: true
     },
   },
   {

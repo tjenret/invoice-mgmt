@@ -41,7 +41,7 @@ const MyInfo = DB.define(
     },
   },
   {
-    tableName: 'my_info',
+    tableName: 'myinfo',
   },
 )
 

@@ -5,7 +5,6 @@ import cors from "cors"
 import notFound from "./middleware/notFound"
 import errorHandler from "./middleware/errorHandler"
 import routes from "./routes"
-
 import syncModels from "./models"
 
 const app = express()
@@ -18,12 +17,9 @@ app.use(helmet())
 app.use(cors())
 app.use(express.json())
 
+// Create DB, if it doesn't exist
 syncModels()
 
-
-app.get("/", (req,res) => { 
-  res.status(200).send("API Works!")
-})
 
 app.use("/api/v1", routes)
 
