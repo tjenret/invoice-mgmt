@@ -8,4 +8,4 @@ const getAll = async (req: Request, res: Response,  tableName: string) => {
 
 
 
-export default getAll
+export { getAll }

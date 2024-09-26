@@ -1,4 +1,4 @@
-import getAll from "../helpers/getQueries"
+import {getAll} from "../helpers/getQueries"
 import Client from "../models/clientModel"
 import { Request, Response } from "express"
 
