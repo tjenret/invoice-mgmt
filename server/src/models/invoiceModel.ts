@@ -22,28 +22,28 @@ const Invoice = DB.define(
       defaultValue: "Due"
     },
     deadline: {
-      type: DataTypes.STRING,
-      allowNull: false,
+      type: DataTypes.DATE,
     },
     shipping: {
       type: DataTypes.NUMBER,
       allowNull: false,
+      defaultValue: 0
     },
     fees: {
       type: DataTypes.NUMBER,
       allowNull: false,
+      defaultValue: 0
     },
     subtotal: {
-      type: DataTypes.STRING,
+      type: DataTypes.NUMBER,
       allowNull: false,
     },
     amt_paid: {
       type: DataTypes.NUMBER,
-      allowNull: false,
+      defaultValue: 0
     },
     date_paid: {
-      type: DataTypes.STRING,
-      allowNull: false,
+      type: DataTypes.DATE,
     },
   },
   {
