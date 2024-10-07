@@ -1,4 +1,4 @@
-# Invoice Management
+# Invoice Tracker
 
 ### A small web app to allow tracking of invoices for multiple business units at once.
 -----
@@ -8,7 +8,7 @@
 - Express
 - Typescript
 - React
-- Sqlite
+- Sqlite3
 
 
 

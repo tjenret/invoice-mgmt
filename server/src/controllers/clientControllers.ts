@@ -8,7 +8,7 @@ const getAllClients = async (req: Request, res: Response) => {
     res.status(200).json(results)
   }
   catch(error:any) {
-    res.status(500).json({"error": error.message})
+    res.status(500).json({"error": "Server Error"})
     console.log(error)
   }
 }
@@ -20,7 +20,7 @@ const getClientByID = async (req: Request, res: Response) => {
     res.status(200).json(results)
   }
   catch(error:any) {
-    res.status(500).json({"error": error.message})
+    res.status(500).json({"error": "Server Error"})
     console.log(error)
   }
 }
@@ -31,7 +31,7 @@ const addClient = async (req: Request, res: Response) => {
     res.status(201).json({ "message": "Client Added"})
   }
   catch(error:any) {
-    res.status(500).json(error.errors[0].message)
+    res.status(500).json({"error": "Server Error"})
     console.log(error)
   }
 }
@@ -42,7 +42,7 @@ const updateClientByID = async (req: Request, res: Response) => {
     res.status(200).json({ "message": `${results} clients(s) updated` })
   }
   catch(error:any) {
-    res.status(500).json(error.errors[0].message)
+    res.status(500).json({"error": "Server Error"})
     console.log(error)
   }
 }
@@ -53,7 +53,7 @@ const deleteClientByID = async (req: Request, res: Response) => {
     res.status(200).json({ "message": `${results} clients(s) deleted` })
   }
   catch(error:any) {
-    res.status(500).json(error.errors[0].message)
+    res.status(500).json({"error": "Server Error"})
     console.log(error)
   }
 }

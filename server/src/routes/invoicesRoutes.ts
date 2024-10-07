@@ -5,7 +5,7 @@ const invoiceRoutes = express.Router()
 
 invoiceRoutes.get("/", getAllInvoices)
 invoiceRoutes.get("/:id", getInvoiceByID)
-invoiceRoutes.get("/:clientid", getInvoicesByClientID)
+invoiceRoutes.get("/client/:clientid", getInvoicesByClientID)
 invoiceRoutes.post("/", addInvoice)
 invoiceRoutes.patch("/:id", updateInvoiceByID)
 invoiceRoutes.delete("/:id", deleteInvoiceByID)

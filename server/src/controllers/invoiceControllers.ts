@@ -8,7 +8,7 @@ const getAllInvoices = async (req: Request, res: Response) => {
     res.status(200).json(results)
   }
   catch(error:any) {
-    res.status(500).json({"error": error.message})
+    res.status(500).json({"error": "Server Error"})
     console.log(error)
   }
 }
@@ -20,7 +20,7 @@ const getInvoiceByID = async (req: Request, res: Response) => {
     res.status(200).json(results)
   }
   catch(error:any) {
-    res.status(500).json({"error": error.message})
+    res.status(500).json({"error": "Server Error"})
     console.log(error)
   }
 }
@@ -31,18 +31,18 @@ const getInvoicesByClientID = async (req: Request, res: Response) => {
     res.status(200).json(results)
   }
   catch(error:any) {
-    res.status(500).json({"error": error.message})
+    res.status(500).json({"error": "Server Error"})
     console.log(error)
   }
 }
 
 const addInvoice = async (req: Request, res: Response) => {
   try {
-    await Invoice.create(req.body)
-    res.status(201).json({ "message": "Invoice Added"})
+    let results:any = await Invoice.create(req.body)
+    res.status(201).json({ "message": "Invoice Added", "inv":results.invoiceid})
   }
   catch(error:any) {
-    res.status(500).json(error.errors[0].message)
+    res.status(500).json({"error": "Server Error"})
     console.log(error)
   }
 }
@@ -53,7 +53,7 @@ const updateInvoiceByID = async (req: Request, res: Response) => {
     res.status(200).json({ "message": `${results} invoices(s) updated` })
   }
   catch(error:any) {
-    res.status(500).json(error.errors[0].message)
+    res.status(500).json({"error": "Server Error"})
     console.log(error)
   }
 }
@@ -64,7 +64,7 @@ const deleteInvoiceByID = async (req: Request, res: Response) => {
     res.status(200).json({ "message": `${results} invoices(s) deleted` })
   }
   catch(error:any) {
-    res.status(500).json(error.errors[0].message)
+    res.status(500).json({"error": "Server Error"})
     console.log(error)
   }
 }

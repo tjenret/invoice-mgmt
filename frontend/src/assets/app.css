@@ -1,0 +1,143 @@
+:root{
+  --primary: rgb(55, 89, 112);
+  --font-main: Arial, Helvetica, sans-serif;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  letter-spacing: .5px;
+}
+
+body {
+font-family: var(--font-main);
+}
+
+h1,h2,h3{
+  color: var(--primary);
+  font-weight: bold;
+}
+
+button {
+  color: var(--primary);
+  font-weight: bold;
+  padding: .5rem .75rem;
+  background-color: unset;
+  border: 1px solid var(--primary);
+  font-size: .8rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.icon {
+  font-size: 24px;
+}
+
+.link {
+  color: rgb(36, 36, 216);
+  font-weight: bold;
+  font-size: .9rem;
+  cursor: pointer;
+}
+
+.invoice-wrapper {
+  padding: 2rem 1rem;
+  margin: 1rem auto;
+  width: 90vw;
+  border: 1px solid var(--primary);
+  border-radius: 32px;
+}
+
+.my-info {
+  margin-bottom: 1rem;
+}
+
+.my-info .name {
+  font-weight: bold;
+  font-size: 24px;
+  margin-bottom: 5px;
+  color: var(--primary);
+}
+
+.address-info p:not(.name ){
+  margin-left: 5px;
+}
+
+.bill-heading {
+  font-weight: bold;
+  font-size: 20px;
+  font-variant: small-caps;
+  color: var(--primary);
+  letter-spacing: 1px;
+  font-style: italic;
+  margin: 2rem 0 5px 0;
+}
+
+.client-info {
+  margin-bottom: 5px;
+}
+
+.client-info .name {
+  font-weight: bold;
+  font-variant: small-caps;
+}
+
+.invoice-options {
+  margin: 1rem 0;
+  display: flex;
+  gap: 1rem;
+}
+
+.invoice-select-heading {
+  font-weight: bold;
+  font-size: .9rem;
+  cursor: pointer;
+  margin: 0 0 5px 10px;
+}
+
+#add-invoice-btn .clientname {
+  text-transform: uppercase;
+}
+
+.invoice-meta {
+  display: flex;
+  gap: 2rem;
+  margin: 2.5rem 0 1rem;
+}
+
+.invoice-meta .data {
+  display: inline-block;
+  min-width: 100px;
+  padding-bottom: .25rem;
+  border-bottom: 1px solid var(--primary);
+  text-align: center;
+}
+
+.line-item-list {
+  width: 100%;
+}
+
+.line-item-list th {
+  background-color: var(--primary);
+  color: rgb(235, 235, 235);
+}
+
+.line-item-list th, .line-item-list td {
+  text-align: left;
+  padding: .5rem;
+}
+
+.line-item-list th.cost, .line-item-list td.cost {
+  text-align: right;
+}
+
+.invoice-totals {
+  width: 350px;
+  margin: 0 1rem 0 auto;
+}
+
+.totals-group {
+  display: flex;
+  justify-content: space-between;
+}
