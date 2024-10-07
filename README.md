@@ -1,6 +1,6 @@
 # Invoice Tracker
 
-### A small web app to allow tracking of invoices for multiple business units at once.
+### A small web app to allow tracking of invoices.
 -----
 
 **Tech Stack**
@@ -13,5 +13,5 @@
 
 
 -----
-Copyright &copy; by tjenret
+&copy; by tjenret
 
